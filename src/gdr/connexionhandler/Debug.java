@@ -12,9 +12,7 @@ import javax.swing.JOptionPane;
  * @author Grégory
  */
 public class Debug {
-    public Debug(){
-        
-    }
+    public Debug(){ }
     
     public void showErrorMessage(int messageID,boolean displayMessage){
         System.out.print("ERROR_");

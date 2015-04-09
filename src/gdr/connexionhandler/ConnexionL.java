@@ -2,18 +2,17 @@ package gdr.connexionhandler;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import static java.util.Objects.hash;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Gui extends javax.swing.JFrame {
+public class ConnexionL extends javax.swing.JFrame {
     private String title;
     private String buttonText;
     
     public String user;
     public boolean isUserGranted = false;
     
-    public Gui(String title, String buttonText){
+    public ConnexionL(String title, String buttonText){
         initComponents();
         this.title = title;
         this.buttonText = buttonText;
@@ -99,7 +98,7 @@ public class Gui extends javax.swing.JFrame {
         try {
             grant(jTextField1.getText());
         } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConnexionL.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -107,7 +106,7 @@ public class Gui extends javax.swing.JFrame {
         try {
             grant(jTextField1.getText());
         } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConnexionL.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("");
     }//GEN-LAST:event_jPasswordField1ActionPerformed
@@ -116,14 +115,10 @@ public class Gui extends javax.swing.JFrame {
         try {
             grant(jTextField1.getText());
         } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConnexionL.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("");
     }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private String getText() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     class ValidateThread implements Runnable {
         public void run() {
@@ -165,7 +160,7 @@ public class Gui extends javax.swing.JFrame {
         for (int i = 0; i < byteData.length; i++) {
          sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
         }
-        System.out.println("Calculated: " + sb.toString());
+        System.out.println("Calculated: "+sb.toString());
         System.out.println("  Expected: "+"5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
         return sb.toString().equals("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
     }
