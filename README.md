@@ -1,2 +1,2 @@
 # ConnexionHandler
-Java test connexion handler
+Development discontinued
